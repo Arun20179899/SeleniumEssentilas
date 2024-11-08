@@ -37,6 +37,7 @@ public class Demo1_DyanamicElement {
 				} else {
 					System.out.println("CPU load of Chrome is not equal");
 				}
+				break;
 			}
 
 		}
