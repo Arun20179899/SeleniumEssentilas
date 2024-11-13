@@ -8,14 +8,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class Demo1_DyanamicElement {
 
 	public static void main(String[] args) throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
+
 		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // purpose to load the dynamic element from
+																			// the server
 		driver.manage().window().maximize();
 		driver.get("https://practice.expandtesting.com/dynamic-table");
 		List<WebElement> rows = driver.findElements(By.xpath("//table[@class='table table-striped']/tbody/tr"));
